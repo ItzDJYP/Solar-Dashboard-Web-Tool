@@ -14,22 +14,31 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
-      <h1 className="text-3xl font-bold text-center mb-6 text-blue-600">
-        Solar Dashboard 🌞
-      </h1>
+    <div
+      className="app-bg"
+      style={{
+        ['--app-bg']: "url('/assets/background-demo.jpeg')",
+        ['--app-bg-color']: '#eef2ff',
+        ['--app-overlay-opacity']: 0.28,
+      }}
+    >
+      <div className="app-card bg-white max-w-4xl mx-auto">
+        <h1 className="text-3xl font-bold text-center mb-6 text-blue-600">
+          Solar Dashboard
+        </h1>
 
-      {/* Input form */}
-      <Inputs onSubmit={handleSubmit} />
+        {/* Input form */}
+        <Inputs onSubmit={handleSubmit} />
 
-      {/* Results */}
-      {results && (
-        <div className="mt-8 flex flex-col items-center space-y-8">
-          <SummaryCards results={results} />
-          <CashFlowTable cashFlows={results.cashFlows} />
-          <CashFlowChart cashFlows={results.cashFlows} />
-        </div>
-      )}
+        {/* Results */}
+        {results && (
+          <div className="mt-8 flex flex-col items-center space-y-8">
+            <SummaryCards results={results} />
+            <CashFlowTable cashFlows={results.cashFlows} />
+            <CashFlowChart cashFlows={results.cashFlows} />
+          </div>
+        )}
+      </div>
     </div>
   );
 }
