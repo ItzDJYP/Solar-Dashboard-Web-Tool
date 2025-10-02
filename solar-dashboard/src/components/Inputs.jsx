@@ -4,6 +4,7 @@ import statePrices from "../utils/statePrices";
 export default function Inputs({ onSubmit }) {
   const [state, setState] = useState("Alabama"); // default first state
   const [size, setSize] = useState("");
+  const [customerType, setCustomerType] = useState("residential");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -11,7 +12,7 @@ export default function Inputs({ onSubmit }) {
       alert("Please enter a valid system size (kW).");
       return;
     }
-    onSubmit({ state, size: parseFloat(size) });
+    onSubmit({ state, size: parseFloat(size), customerType });
   };
 
   return (
@@ -48,6 +49,20 @@ export default function Inputs({ onSubmit }) {
           min="1"
           step="0.1"
         />
+      </label>
+
+      {/* Customer type */}
+      <label className="block mb-3">
+        <span className="text-gray-600">Customer Type</span>
+        <select
+          value={customerType}
+          onChange={(e) => setCustomerType(e.target.value)}
+          className="w-full mt-1 p-2 border rounded"
+        >
+          <option value="residential">Residential</option>
+          <option value="commercial">Commercial</option>
+          <option value="average">Average (Combined)</option>
+        </select>
       </label>
 
       <button

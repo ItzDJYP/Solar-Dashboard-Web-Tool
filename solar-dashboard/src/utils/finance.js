@@ -1,5 +1,5 @@
-// src/utils/finance.js
 import statePrices from "./statePrices";
+import { getPriceDollars } from "./priceTool";
 
 // System constants
 const COST_PER_WATT = 2.5; // $/W
@@ -42,9 +42,9 @@ function calculatePayback(cashFlows) {
 }
 
 // Main financial model
-export function calculateProject(state, size) {
-  const priceCents = statePrices[state] || 13; // default = 13¢/kWh
-  const pricePerKWh = priceCents / 100; // convert to $
+export function calculateProject(state, size, customerType = 'residential') {
+  // pricePerKWh is in $/kWh and uses the designated customer type
+  const pricePerKWh = getPriceDollars(state, customerType) || (13 / 100);
 
   // Upfront system cost
   const upfrontCost = size * 1000 * COST_PER_WATT;

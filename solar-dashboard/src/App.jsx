@@ -8,8 +8,8 @@ import { calculateProject } from "./utils/finance";
 function App() {
   const [results, setResults] = useState(null);
 
-  const handleSubmit = ({ state, size }) => {
-    const res = calculateProject(state, size);
+  const handleSubmit = ({ state, size, customerType }) => {
+    const res = calculateProject(state, size, customerType);
     setResults(res);
   };
 

@@ -172,4 +172,3 @@ button:focus-visible {
 
 /* helper to disable overlay if needed */
 .no-overlay .app-bg::before { background: transparent; }
-
