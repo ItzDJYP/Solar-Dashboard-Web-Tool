@@ -71,7 +71,7 @@ button:focus-visible {
 
 /* --- Utility classes (small subset of Tailwind used by components) --- */
 
-/* Layout / containers */
+/* Layout containers */
 .bg-white { background-color: #ffffff; color: #111827; }
 .p-6 { padding: 1.5rem; }
 .p-4 { padding: 1rem; }

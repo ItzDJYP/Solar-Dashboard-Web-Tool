@@ -2,7 +2,7 @@ import { useState } from "react";
 import Inputs from "./components/Inputs";
 import SummaryCards from "./components/SummaryCards";
 import CashFlowTable from "./components/CashFlowTable";
-import CashFlowChart from "./components/CashFlowChart"; // notice plural in filename
+import CashFlowChart from "./components/CashFlowChart";
 import { calculateProject } from "./utils/finance";
 
 function App() {
@@ -24,8 +24,7 @@ function App() {
     >
       <div className="app-card bg-white max-w-4xl mx-auto">
         <h1 className="text-3xl font-bold text-center mb-6 text-blue-600">
-          Solar Dashboard
-        </h1>
+          Solar Dashboard</h1>
 
         {/* Input form */}
         <Inputs onSubmit={handleSubmit} />

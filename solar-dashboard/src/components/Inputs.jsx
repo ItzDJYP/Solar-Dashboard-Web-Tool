@@ -8,7 +8,7 @@ export default function Inputs({ onSubmit }) {
   // area-to-kW converter states
   const [area, setArea] = useState("");
   const [areaUnit, setAreaUnit] = useState("sqft"); // 'sqft' or 'sqm'
-  const [powerDensity, setPowerDensity] = useState(205); // W per m^2 (typical)
+  const [powerDensity, setPowerDensity] = useState(205); // W per m^2 of panels
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -107,7 +107,7 @@ export default function Inputs({ onSubmit }) {
               }
               const areaM2 = areaUnit === "sqft" ? numericArea / 10.7639 : numericArea;
               const kw = (areaM2 * powerDensity) / 1000;
-              const rounded = Math.round(kw * 10) / 10; // one decimal place
+              const rounded = Math.round(kw * 10) / 10; // rounded to one decimal place
               setSize(String(rounded));
             }}
             className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
