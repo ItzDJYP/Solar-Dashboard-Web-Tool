@@ -72,7 +72,7 @@ Solar-Dashboard-Web-Tool-main/
                 priceTool.js
                 statePrices.js
 
-## How to Use
+## How to Set-Up For Local Use
 Step 1: Download the repo using any method (downloading the zip file, opening in visual studio, opening through github desktop. whichever is the most comfortable to you)
 
 Step 2: Open your IDE or code editor and install all dependencies and node modules using the following commands below:
