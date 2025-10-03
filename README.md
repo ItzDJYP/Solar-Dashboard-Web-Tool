@@ -86,3 +86,6 @@ Step4: Go to  http://localhost:5173/ as the website should be running there.
 
 ## Documentation
 Link: https://docs.google.com/document/d/1UkvgVe9MCFp0rBqwrQ8fOSnwHO9Z06gyj4FOratf4kg/edit?usp=sharing
+[PDF Download](Solar Dashboard Web Tool.pdf)
+## Website Link:
+Website Link: https://itzdjyp.github.io/Solar-Dashboard-Web-Tool
